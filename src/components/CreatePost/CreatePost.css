@@ -1,0 +1,62 @@
+.fileInput {
+  display: none;
+}
+.addToTweet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.addToTweet label {
+  height: 23px;
+}
+.mediaContainer img, .mediaContainer video {
+  width: 40rem;
+  border-radius: 10px;
+}
+.mediaContainer {
+  position: relative;
+}
+.mediaContainer .closeMedia {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: rgb(60, 60, 60);
+  color:  var(--text-color);
+  margin: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+aside.EmojiPickerReact.epr-main{
+  position: absolute !important;
+  z-index: 10;
+  top: 35%;
+  left: 30%;
+}
+.GifPickerReact.gpr-main{
+  position: absolute !important;
+  z-index: 10;
+  top: 35%;
+  left: 20%;
+}
+.tweetInputHomePage{
+  width: 100%;
+  min-height: 100px;
+  background: var(--background-color);
+  color:  var(--text-color);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  resize: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  border: none;
+}
+.tweetInputHomePage.empty::before{
+  content: attr(placeholder);
+  color: #999;
+}
+.tweetInputHomePage{
+  outline: none;
+}

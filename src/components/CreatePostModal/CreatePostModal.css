@@ -1,0 +1,94 @@
+.modal {
+  position: fixed;
+  width: 35%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-color);
+  color:  var(--text-color);
+  z-index: 11;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  border-radius: 10px;
+  padding: 1.5rem;
+  padding-right: 2.5rem;
+  max-height: 85vh;
+  overflow-y: scroll;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25,25,25,.7);
+  z-index: 10;
+}
+
+.newPostModal {
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+}
+
+.newPostModal form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tweetInput {
+  width: 100%;
+  min-height: 100px;
+  background: var(--dark-grey-color);
+  color:  var(--text-color);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  resize: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  border: none;
+  padding: 0.5rem 0.8rem;
+}
+
+.tweetInput.empty::before {
+  content: attr(placeholder);
+  /* color: #999; */
+}
+
+.tweetInput:focus {
+  outline: none;
+}
+
+.modalMediaContainer img,
+.modalMediaContainer video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modalMediaContainer {
+  position: relative;
+}
+
+.modalMediaContainer .closeMediaInModal,
+.closePostModal {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: rgb(60, 60, 60);
+  color:  var(--text-color);
+  margin: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+@media screen and (max-width: 480px) {
+  .modal{
+    top: 28%;
+    width: 90%;
+  }
+}

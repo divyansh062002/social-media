@@ -1,0 +1,72 @@
+.homeSection {
+  padding: 0.5rem 0rem;
+  min-height: 100vh;
+}
+.newPost {
+  display: grid;
+  grid-template-columns: 2.5rem auto;
+  column-gap: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+}
+.newPost form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.createTweetActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.createTweetActions button {
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.createTweetActions button:disabled {
+  background: #0060a1;
+  color: #b8b8b8;
+  cursor: default;
+}
+.userAvatar p {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 0.4rem;
+  width: 2.2rem;
+}
+.tweet-input {
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.tweet-input.empty::before {
+  content: attr(placeholder);
+  color: #999;
+}
+.postsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.nothingToShow {
+  color: grey;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .newPost {
+    grid-template-columns: 2rem auto;
+  }
+}

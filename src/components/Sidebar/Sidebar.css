@@ -1,0 +1,110 @@
+.sidebarContainer {
+  position: sticky;
+  left: 0;
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 89vh;
+  padding: 0.5rem 0rem;
+}
+.topSection{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.individualSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  color:  var(--text-color);
+}
+.individualSection:hover, .loggedInUserProfile:hover{
+  background: var(--dark-grey-color);
+}
+.individualSection span {
+  font-size: 1.3rem;
+}
+.newPostBtn {
+  padding: 0.8rem 1rem;
+  background: var(--primary-color);
+  color:  var(--text-color);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.newPostBtn:hover{
+  background: var(--button-hover);
+  transition: all 0.5s ease;
+}
+.newPostBtn span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.loggedInUserProfile{
+  display: flex;
+  gap: 0.8rem;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 30px;
+}
+.loggedInUserProfile .fullName{
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.loggedInUserProfile .username{
+  opacity: 0.4;
+}
+@media screen and (max-width: 480px) {
+  .sidebarContainer{
+    order: 2;
+    top: unset;
+    left: unset;
+    bottom: 0;
+    z-index: 9;
+    background: var(--background-color);
+    justify-content: space-around;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0.5rem;
+    width: 100vw;
+  }
+  .topSection{
+    flex-direction: row;
+  }
+  .topSection nav{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .newPostBtn{
+    bottom: 150%;
+    position: absolute;
+    right: 4%;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+  .newPostBtn span{
+    display: none;
+  }
+  .individualSection span{
+    display: none;
+  }
+  .loggedInUserInfo{
+    display: none;
+  }
+  .individualSection{
+    padding: 0.5rem 1rem;
+  }
+}

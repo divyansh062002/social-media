@@ -1,0 +1,43 @@
+.singleComment {
+  display: flex;
+  gap: 0.1rem;
+}
+.commentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+.userInfoOfComment {
+  display: flex;
+  gap: 0.5rem;
+}
+.commentContent {
+  max-width: 25rem;
+  overflow-wrap: break-word;
+}
+.commentProfile {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.commentProfile span {
+  font-weight: 700;
+  max-width: 100px;
+}
+.commentProfile p {
+  color: gray;
+  max-width: 80px;
+}
+@media screen and (max-width: 480px) {
+  .commentContent {
+    max-width: 18rem;
+  }
+  .commentProfile span {
+    max-width: 80px;
+    white-space: initial;
+  }
+}
